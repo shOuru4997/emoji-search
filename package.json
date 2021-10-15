@@ -15,12 +15,11 @@
     "uuid": "^8.3.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build && cp build/index.html build/404.html"
     "eject": "react-scripts eject",
     "cy:test": "cypress run --headless --browser chrome --spec \"cypress/integration/*.spec.js\""
   },
